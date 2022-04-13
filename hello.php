@@ -8,7 +8,7 @@ try {
   // set the PDO error mode to exception
   $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
   echo "Connected successfully";
-  $sql = "SELECT * FROM db";
+  $sql = "SELECT * FROM sinhvien";
 // thực hiện cầu lên truy vấn và kết nối
 $result = mysqli_query($conn, $sql);
 // tạo một mảng
