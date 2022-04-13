@@ -8,7 +8,7 @@
 <?php
     //fetch table rows from mysql db
     $sql = "select * from sinhvien";
-    $result = mysqli_query($connection, $sql) or die("Error in Selecting " . mysqli_error($connection));
+    $result = mysqli_query($connection, $sql) ordie("Error in Selecting " . mysqli_error($connection));
 ?>
 <?php
     //create an array
