@@ -1,17 +1,14 @@
-<?php 
-// kết nối tới mysql
-$conn = mysqli_connect("localhost", "root", "123456", "sqlquanlysinhvien");
-// câu lệnh truy vấn sql
-$sql = "SELECT * FROM sinhvien";
-// thực hiện cầu lên truy vấn và kết nối
-$result = mysqli_query($conn, $sql);
-// tạo một mảng
-$arr = array();
+<?php
+$servername = "localhost";
+$username = "root";
+$password = "123456";
 
-while ($rows = mysqli_fetch_assoc($result)) {
-	array_push($arr, $rows);
+// Create connection
+$conn = new mysqli($servername, $username, $password);
+
+// Check connection
+if ($conn->connect_error) {
+  die("Connection failed: " . $conn->connect_error);
 }
-// xuất json
-echo json_encode($arr);
-
+echo "Connected successfully";
 ?>
